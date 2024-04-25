@@ -3,8 +3,6 @@ from flask import Blueprint, jsonify, request
 from models.history_model import HistoryModel
 from models.user_model import UserModel
 
-# dfgd
-
 admin_controller = Blueprint("admin_controller", __name__)
 
 
