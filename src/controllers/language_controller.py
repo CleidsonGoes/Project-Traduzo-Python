@@ -20,3 +20,8 @@ def home():
         translate_to=translate_to,
         translated=translated,
     )
+
+
+@language_controller.route("/", methods=["POST"])
+def translate_text():
+    languages = LanguageModel.list_dicts()
