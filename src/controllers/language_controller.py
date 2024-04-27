@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 from models.language_model import LanguageModel
 
 language_controller = Blueprint("translation", __name__)
@@ -25,3 +25,14 @@ def home():
 @language_controller.route("/", methods=["POST"])
 def translate_text():
     languages = LanguageModel.list_dicts()
+    text_to_translate = request.form["text-to-translate"]
+    translate_from = request.form["translate-from"]
+    translate_to = request.form["translate-to"]
+    translated = 
+
+    return render_template("index.html",
+                           languages=languages,
+                           text_to_translate=text_to_translate,
+                           translate_from=translate_from,
+                           translate_to=translate_to,
+                           translated=translated)
