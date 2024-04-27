@@ -57,4 +57,8 @@ def reverse_translate_text():
     return render_template(
         "index.html",
         languages=languages,
+        text_to_translate=translated_text,
+        translate_from=translate_to,
+        translate_to=translate_from,
+        translated=text_to_translate,
     )
